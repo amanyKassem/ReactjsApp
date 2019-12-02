@@ -1,4 +1,5 @@
 import React , {Component} from 'react';
+import { withRouter } from 'react-router-dom';
 
 class Form extends Component {
     constructor(props){
@@ -21,7 +22,8 @@ class Form extends Component {
     }
     handleSubmit = (event) =>{
         alert(`${this.state.username} ${this.state.comments} ${this.state.topic} `)
-        event.preventDefault()
+        event.preventDefault();
+        this.props.history.push('/')
     }
 
     render() {
@@ -52,4 +54,4 @@ class Form extends Component {
     }
 }
 
-export default Form;
+export default withRouter(Form);
