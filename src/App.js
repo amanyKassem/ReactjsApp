@@ -4,6 +4,15 @@ import Greet from './components/Greet'
 import Message from './components/Message'
 import Form from './components/Form'
 import Nav from './components/Nav'
+import LifecycleA from './components/LifecycleA'
+import Table from './components/Table'
+import ParentComp from './components/ParentComp'
+import RefsDemo from './components/RefsDemo'
+import FocusInput from './components/FocusInput'
+import FRParentInput from './components/FRParentInput'
+import PortalDemo from './components/PortalDemo'
+import ClickCounter from './components/ClickCounter'
+import HoverCounter from './components/HoverCounter'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 class App extends Component {
@@ -22,6 +31,17 @@ class App extends Component {
                 <Route path='/greet' component={(props) => <Greet {...props} name='amany' />}/>
                 <Route path='/form' component={Form}/>
             </Switch>
+
+            {/*<LifecycleA/>*/}
+            {/*<Table/>*/}
+            {/*<ParentComp/>*/}
+            {/*<RefsDemo/>*/}
+            {/*<FocusInput/>*/}
+            {/*<FRParentInput/>*/}
+            {/*<PortalDemo/>*/}
+            <ClickCounter name={'amany'}/>
+            <HoverCounter name={'amany'}/>
+
         </div>
     </Router>
   );
