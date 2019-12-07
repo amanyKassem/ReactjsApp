@@ -23,7 +23,9 @@ class Form extends Component {
     handleSubmit = (event) =>{
         alert(`${this.state.username} ${this.state.comments} ${this.state.topic} `)
         event.preventDefault();
-        this.props.history.push('/')
+        this.props.history.push('/greet' , {
+            name:'fathy kassem'
+        })
     }
 
     render() {
